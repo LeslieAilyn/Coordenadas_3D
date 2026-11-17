@@ -4,37 +4,36 @@
 void limpiarbuffer()
 {
     int c;
-    while((c=getchar())!='\n'&&c!=EOF);
-
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
 }
 
 void leercoor(Cord3D *c)
 {
     printf("x:");
-    scanf("%d",&c->x);
+    scanf("%d", &c->x);
     limpiarbuffer();
     printf("y:");
-    scanf("%d",&c->y);
+    scanf("%d", &c->y);
     limpiarbuffer();
     printf("z:");
-    scanf("%d",&c->z);
+    scanf("%d", &c->z);
     limpiarbuffer();
 }
 void mostrar_coo(Cord3D *c, int tam)
 {
 
     printf("|");
-    for(int i=0;i<tam;i++)
+    for (int i = 0; i < tam; i++)
     {
-        printf("%d,",c[i].x);
-        printf("%d,",c[i].y);
-        printf("%d,",c[i].z);
-
+        printf("%d,", c[i].x);
+        printf("%d,", c[i].y);
+        printf("%d,", c[i].z);
     }
     printf("|");
 }
 /*
-void almacenar_archivo(Cord3D *c,int tam, int binario)
+FILE* almacenar_archivo(Cord3D *c,int tam, int binario)
 {
     FILE *archivo_3D;
     if (binario)
